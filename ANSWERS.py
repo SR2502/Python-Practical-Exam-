@@ -23,30 +23,30 @@ print(f"sum of first {n} even numbers is {evensum(n)}")
 
 #(C)
 
-def sumodd(n):
-	return (n * n)
-def sumeven(n):
-	return (n * (n + 1))
+def odd(x):
+	return (x * x)
+def even(x):
+	return (x * (x + 1))
 def findSum(num):
-	sumo = 0
-	sume = 0
-	x = 1
-	cur = 0
+	sum_odd = 0
+	sum_even = 0
+	y = 1
+	start = 0
 	ans = 0
 	while (num > 0):
-		inc = min(x, num)
+		inc = min(y, num)
 		num -= inc
-		if (cur == 0):
-			ans = ans + sumodd(sumo + inc) - sumodd(sumo)
-			sumo += inc
+		if (start == 0):
+			ans = ans + odd(sum_odd + inc) - odd(sum_odd)
+			sum_odd += inc
 		else:
-			ans = ans + sumeven(sume + inc) - sumeven(sume)
-			sume += inc
-		x *= 2
-		cur ^= 1
+			ans = ans + even(sum_even + inc) - even(sum_even)
+			sum_even += inc
+		y = y * 2
+		start ^= 1
 	return ans
-n = int(input("enter the number -"))
-print(findSum(n))
+x = int(input("enter the number - "))
+print(findSum(x))
 
 
 # question 2 Consider a tuple t1=(1,2,5,7,9,2,4,6,8,10). Write a program to perform following operations:
@@ -73,7 +73,7 @@ print(f"concentated tuple - {con_tup}")
 print(f"The maximum and minimum value in this tuple are {max(t1)} and {min(t1)} respectively")
 
 # question 3 - Write a menu driven program to perform the following functions on strings:
-#(A- D)
+#( A - D , menu question)
 
 x = str(input("enter your word/sentence - "))
 print(f'your typed word is - {x}')
