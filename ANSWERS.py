@@ -23,31 +23,7 @@ print(f"sum of first {n} even numbers is {evensum(n)}")
 
 #(C)
 
-def odd(x):
-	return (x * x)
-def even(x):
-	return (x * (x + 1))
-def findSum(num):
-	sum_odd = 0
-	sum_even = 0
-	y = 1
-	start = 0
-	ans = 0
-	while (num > 0):
-		inc = min(y, num)
-		num -= inc
-		if (start == 0):
-			ans = ans + odd(sum_odd + inc) - odd(sum_odd)
-			sum_odd += inc
-		else:
-			ans = ans + even(sum_even + inc) - even(sum_even)
-			sum_even += inc
-		y = y * 2
-		start ^= 1
-	return ans
-x = int(input("enter the number - "))
-print(findSum(x))
-
+# i cant seem to undersatnd the pattern, sorry
 
 # question 2 Consider a tuple t1=(1,2,5,7,9,2,4,6,8,10). Write a program to perform following operations:
 t1 = (1,2,5,7,9,2,4,6,8,10)
